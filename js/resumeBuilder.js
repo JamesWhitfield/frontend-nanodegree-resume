@@ -9,6 +9,7 @@ var bio = {
     "name": "James Whitfield",
     "age": 25,
     "role": "Software Developer",
+    "location": "Nottingham, UK",
     "contact": [{
         "name": "Email",
         "address": "j.f.whitfield@me.com"
@@ -25,6 +26,13 @@ var bio = {
         "time": "2 years  2014 - 2016 ",
         "location": "Nottinghham, UK",
         "website": "http://www.hillarys.co.uk/",
+        "description": "Andorid developer"
+    }, {
+        "position": "Android Developer",
+        "company": "Amey",
+        "time": "March 2016 +",
+        "location": "Manchester, UK",
+        "website": "https://www.amey.co.uk/",
         "description": "Andorid developer"
     }],
     "education": [{
@@ -43,13 +51,13 @@ var bio = {
     "projects": [{
         "title": "SAMSON",
         "dates": "2 years  2014 - 2016 ",
-        "description": "An android application to allow self employed sales and fitter representatives to manage the full work flow of their business from a mobile phone or tablet. Full SAP integration allows for the sale of Blinds, Curtains, and carpets in over half a million product combinations.The projects use of the Agile SCRUM methodology earned it a nomination in the 2014 UK Agile Awards, and Hillarys won the TechWorld Awards 2013 – Enterprise Software Project of the Year.",
+        "description": "An android application to allow self employed sales and fitter representatives of Hillarys to manage the full work flow of their business from a mobile phone or tablet. Full SAP integration allows for the sale of Blinds, Curtains, and carpets in over half a million product combinations.The projects use of the Agile SCRUM methodology earned it a nomination in the 2014 UK Agile Awards, and Hillarys won the TechWorld Awards 2013 – Enterprise Software Project of the Year.",
         "image": ["images/Screenshot_2016-02-24-10-00-02.png"],
         "link": "http://www.hillarys.co.uk/"
     }, {
         "title": "Network Traffic Monitor",
         "dates": "2016 +",
-        "description": "An android application to show real time and historical network speed and usage on a user device to help enable user tracking of what apps are using a devices data",
+        "description": "Personal project: An android application to show real time and historical network speed and usage on a user device to help enable user tracking of what apps are using a devices data",
         "image": ["images/Screenshot_2016-02-24-10-05-07.png"],
         "link": "https://play.google.com/store/apps/details?id=com.whitfield.james.simplenetworkspeedmonitor"
     }]
@@ -172,7 +180,7 @@ projects.display = function() {
             $(".project-entry:last").append(HTMLprojectDates.replace("%data%", projectItem.dates));
             $(".project-entry:last").append(HTMLprojectDescription.replace("%data%", projectItem.description));
             if (projectItem.image.length > 0) {
-                console.log("Images found");
+                // console.log("Images found");
                 for (pic in projectItem.image) {
                     $(".project-entry:last").append(HTMLprojectImage.replace("%data%", projectItem.image[pic]));
                 }
@@ -199,9 +207,15 @@ function convertInternational(names) {
     return firstName + " " + nameSplit[1].toUpperCase();
 }
 
+function mapSetup() {
+
+    $("#mapDiv").append(googleMap);
+}
+
 displayBio();
 displaySkills();
 displayWork();
 displayEducation();
 setupEvents();
 projects.display();
+mapSetup();

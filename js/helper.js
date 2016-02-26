@@ -12,9 +12,9 @@ replace the %data% placeholder text you see in them.
 var HTMLheaderName = '<h1 id="name">%data%</h1>';
 var HTMLheaderRole = '<span>%data%</span><hr>';
 
-var HTMLcontactGeneric = '<li class="flex-item"><span class="orange-text">%contact%</span><span class="white-text">%data%</span></li>';
+var HTMLcontactGeneric = '<li class="flex-item"><span class="">%contact%</span><span class="">%data%</span></li>';
 var HTMLmobile = '<li class="flex-item"><span class="orange-text">mobile</span><span class="white-text">%data%</span></li>';
-var HTMLemail = '<li class="flex-item"><span class="orange-text">email</span><span class="white-text">%data%</span></li>';
+var HTMLemail = '<li class="flex-item"><span class="">email</span><span class="white-text">%data%</span></li>';
 var HTMLtwitter = '<li class="flex-item"><span class="orange-text">twitter</span><span class="white-text">%data%</span></li>';
 var HTMLgithub = '<li class="flex-item"><span class="orange-text">github</span><span class="white-text">%data%</span></li>';
 var HTMLblog = '<li class="flex-item"><span class="orange-text">blog</span><span class="white-text">%data%</span></li>';
@@ -121,23 +121,26 @@ function initializeMap() {
         var locations = [];
 
         // adds the single location property from bio to the locations array
-        locations.push(bio.contacts.location);
-
+        locations.push(bio.location);
+        console.log("Location found");
         // iterates through school locations and appends each location to
         // the locations array. Note that forEach is used for array iteration
         // as described in the Udacity FEND Style Guide: 
         // https://udacity.github.io/frontend-nanodegree-styleguide/javascript.html#for-in-loop
-        education.schools.forEach(function(school) {
-            locations.push(school.location);
+        bio.education.forEach(function(school) {
+            locations.push(school.city);
+            console.log("Location found");
         });
 
         // iterates through work locations and appends each location to
         // the locations array. Note that forEach is used for array iteration
         // as described in the Udacity FEND Style Guide: 
         // https://udacity.github.io/frontend-nanodegree-styleguide/javascript.html#for-in-loop
-        work.jobs.forEach(function(job) {
+        bio.work.forEach(function(job) {
             locations.push(job.location);
+            console.log("Location found");
         });
+
 
         return locations;
     }
@@ -222,6 +225,7 @@ function initializeMap() {
     // locations is an array of location strings returned from locationFinder()
     locations = locationFinder();
 
+
     // pinPoster(locations) creates pins on the map for each location in
     // the locations array
     pinPoster(locations);
@@ -233,11 +237,11 @@ Uncomment the code below when you're ready to implement a Google Map!
 */
 
 // Calls the initializeMap() function when the page loads
-//window.addEventListener('load', initializeMap);
+window.addEventListener('load', initializeMap);
 
 // Vanilla JS way to listen for resizing of the window
 // and adjust map bounds
-//window.addEventListener('resize', function(e) {
-//Make sure the map bounds get updated on page resize
-//  map.fitBounds(mapBounds);
-//});
+window.addEventListener('resize', function(e) {
+    //Make sure the map bounds get updated on page resize
+    map.fitBounds(mapBounds);
+});
