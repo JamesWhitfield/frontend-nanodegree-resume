@@ -16,17 +16,20 @@ var bio = {
     }, {
         "name": "GitHub",
         "address": "https://github.com/JamesWhitfield"
+    }, {
+        "name": "LinkedIn",
+        "address": "https://uk.linkedin.com/in/james-whitfield-189810114"
     }],
     "blurb": "Some text about me that seems very interesting",
     "skills": ["Java", "Android", "UI", "XML", "SQL", "JSON", "REST/SOAP"],
-    "bioPic": "http://placehold.it/555x300",
+    "bioPic": "images/20160226_101503.jpg",
     "work": [{
         "position": "Junior Mobile Developer",
         "company": "Hillarys",
         "time": "2 years  2014 - 2016 ",
-        "location": "Nottinghham, UK",
+        "location": "Nottingham, UK",
         "website": "http://www.hillarys.co.uk/",
-        "description": "Andorid developer"
+        "description": "Android developer"
     }, {
         "position": "Android Developer",
         "company": "Amey",

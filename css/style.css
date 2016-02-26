@@ -1,4 +1,14 @@
-body,
+body {
+    background-color: #f5f5f5;
+    margin: 0%;
+    padding: 0%;
+    font-size: 18px;
+}
+
+html {
+    background-color: #f5f5f5;
+}
+
 div,
 ul,
 li,
@@ -11,7 +21,7 @@ h5,
 h6 {
     padding: 0;
     margin: 0;
-    font-family: "Roboto", sans-serif;
+    /*font-family: "Roboto", sans-serif;*/
 }
 
 .clear-fix {
@@ -22,27 +32,26 @@ h6 {
 .work-entry,
 .project-entry {
     padding: 0 5%;
+    font-size: 20px;
 }
 
 h1 {
     font-size: 40px;
-    color: #000000
-
-;
+    color: #333;
     line-height: 48px;
     display: inline;
 }
 
 h2 {
     font-weight: bold;
-    font-size: 24px;
-    color: #999;
-    line-height: 29px;
-    padding: 10px;
+    font-size: 30px;
+    /*color: #fff;*/
+    line-height: 1em;
+    padding: 10px 5%;
 }
 
 h3 {
-    font-style: italic;
+    /*font-style: italic;*/
     font-size: 20px;
     color: #000;
     line-height: 22px;
@@ -55,7 +64,6 @@ h4 {
     line-height: 17px;
 }
 
-h2,
 h3,
 h4,
 h5 {
@@ -63,24 +71,30 @@ h5 {
 }
 
 .date-text {
-    font-style: italic;
-    font-size: 14px;
-    color: #999;
-    line-height: 16px;
+    /*font-style: italic;*/
+    font-size: 18px;
+    color: #a7a7a7;
+    line-height: 1.5em;
     /* float: left; */
 }
 
 .location-text {
-    font-style: italic;
-    font-size: 14px;
-    color: #999;
-    line-height: 16px;
+    font-size: 18px;
+    color: #a7a7a7;
+    line-height: 1.5em;
     /* float: right; */
+}
+
+.description-text {
+    font-size: 18px;
+    color: #a7a7a7;
+    line-height: 1.5em;
 }
 
 p {
     font-size: 14px;
     color: #333;
+    font-weight: 400;
     line-height: 21px;
 }
 
@@ -99,16 +113,17 @@ a {
 }
 
 #skills-h3 {
-    color: #f5ae23;
+    /*color: #f5ae23;*/
     display: none;
+    text-align: center;
 }
 
 .orange {
     background-color: #f5ae23;
 }
 
-.orange-text {
-    color: #f5ae23;
+.grey-text {
+    color: #a7a7a7;
 }
 
 .white-text {
@@ -117,13 +132,18 @@ a {
 }
 
 .gray {
-    background-color: #f3f3f3;
+    background-color: #222;
+    color: #fff;
     padding-bottom: 10px;
     clear: both;
 }
 
 .dark-gray {
     background-color: #4a4a4a;
+}
+
+.white {
+    color: #333;
 }
 
 
@@ -163,6 +183,7 @@ img {
 
 span {
     padding: 5px;
+    color: #222
 }
 
 #lets-connect {
@@ -212,6 +233,7 @@ span {
     #skills-h3,
     .biopic {
         display: block;
+        text-align: center;
     }
 }
 
@@ -225,6 +247,9 @@ span {
     -moz-box-sizing: border-box;
     -ms-box-sizing: border-box;
     box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+    /*color: #747704;*/
+    font-weight: 400;
 }
 
 
