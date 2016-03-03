@@ -19,6 +19,9 @@ var bio = {
     }, {
         "name": "LinkedIn",
         "address": "https://uk.linkedin.com/in/james-whitfield-189810114"
+    }, {
+        "name": "Stack overflow",
+        "address": "http://stackoverflow.com/users/5550475/j-whitfield"
     }],
     "blurb": "Some text about me that seems very interesting",
     "skills": ["Java", "Android", "UI", "XML", "SQL", "JSON", "REST/SOAP"],
